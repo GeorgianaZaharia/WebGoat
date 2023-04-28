@@ -19,13 +19,14 @@ steps:
   displayName: 'Run a multi-line script'
 - task: SynopsysDetectTask@8
   inputs:
-    BlackDuckService: 'yaml'
-    BlackDuckProxyService: 'Credentials'
+    BlackDuckService: 'HUB'
+    BlackDuckProxyService: 'Black Duck HUB'
     DetectArguments: |
       --blackduck.trust.cert=true
       --detect.blackduck.signature.scanner.snippet.matching=FULL_SNIPPET_MATCHING
       --detect.blackduck.signature.scanner.individual.file.matching=ALL
       --detect.detector.search.depth=100
+      --detect.blackduck.signature.scanner.upload.source.mode=true
       --detect.project.name=Azure_testG
       --detect.project.version.name=1.0
     DetectVersion: 'latest'
