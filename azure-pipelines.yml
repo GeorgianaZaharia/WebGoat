@@ -20,7 +20,6 @@ steps:
 - task: SynopsysDetectTask@8
   inputs:
     BlackDuckService: 'HUB'
-    BlackDuckProxyService: 'Black Duck HUB'
     DetectArguments: |
       --blackduck.trust.cert=true
       --detect.blackduck.signature.scanner.snippet.matching=FULL_SNIPPET_MATCHING
