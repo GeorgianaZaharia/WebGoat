@@ -18,7 +18,7 @@ phases:
       - mvn clean install
   post_build:
     commands:
-      - bash detect8.sh --blackduck.url=$BLACKDUCK_URL --blackduck.api.token=$BLACKDUCK_TOKEN --blackduck.trust.cert=true --detect.project.name=$PROJECT_NAME --detect.project.version.name=$PROJECT_VERSION_NAME
+      - bash detect8.sh --blackduck.url=$BLACKDUCK_URL --blackduck.api.token=$BLACKDUCK_TOKEN --blackduck.trust.cert=true --blackduck.signature.scanner.individual.file.matching = ALL --blackduck.signature.scanner.snippet.matching = FULL_SNIPPET_MATCHING --blackduck.signature.scanner.upload.source.mode = true --detector.search.depth = 100 --detect.project.name=$PROJECT_NAME --detect.project.version.name=$PROJECT_VERSION_NAME
   
 artifacts:
   discard-paths: yes
