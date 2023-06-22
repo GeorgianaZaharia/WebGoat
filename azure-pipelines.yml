@@ -27,5 +27,5 @@ steps:
       --detect.detector.search.depth=100
       --detect.blackduck.signature.scanner.upload.source.mode=true
       --detect.project.name=Azure_yamlG
-      --detect.project.version.name=1.0
+      --detect.project.version.name=fortestrole
     DetectVersion: 'latest'
